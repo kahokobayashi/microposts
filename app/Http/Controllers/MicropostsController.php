@@ -30,7 +30,7 @@ class MicropostsController extends Controller
             return view('welcome');
         }
     }
-     public function store(Request $request)
+        public function store(Request $request)
     {
         $this->validate($request, [
             'content' => 'required|max:191',
@@ -42,7 +42,7 @@ class MicropostsController extends Controller
 
         return redirect()->back();
     }
-    public function destroy($id)
+        public function destroy($id)
     {
         $micropost = \App\Micropost::find($id);
 
